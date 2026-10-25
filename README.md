@@ -1,5 +1,11 @@
 # Responsive-Web-Designing
 
 <p align="center">
-  <img src="Images/Pic1.png" width="800";
+  <table>
+    <tr>
+      <td>
+        <img src="Desktop.png" width="1000" alt="Desktop View">
+      </td>
+    </tr>
+  </table>
 </p>
