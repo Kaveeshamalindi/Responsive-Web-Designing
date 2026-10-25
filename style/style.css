@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+}
+
+header, nav, aside, main, footer{
+    width: 95%;
+    margin-left: 2%;
+    margin-top: 5px;
+    border-top: 5px solid skyblue;
+}
+
+header{
+    height: 100px;
+    text-align: center;
+}
+
+h1{
+    color: rgb(9, 9, 158);
+    font-size: 36pt;
+    font-weight: bolder;
+}
+
+nav{
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    margin-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    list-style: none;
+}
+
+nav ul li {
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: 16pt;
+    border-left: 2px solid skyblue;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    background-color: skyblue;
+    margin-left: 5px;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+}
+
+a:link{
+    color: rgb(9, 9, 158);
+}
+
+a:visited{
+    color: rgb(132, 8, 134);
+}
+
+a:hover{ 
+    color: rgb(6, 98, 35);
+    font-size: 20pt;
+    font-weight: 700; 
+}
+
+.pic1, .pic2 {
+    display: block;
+    margin: 15px auto 0;
+    width: min(250px, 85%);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 5px solid skyblue;
+}
+
+.pic3, .pic4, .pic5, .pic6 {
+    margin: 0;
+    width: 22%;
+    max-width: 230px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 5px solid skyblue;
+}
+
+aside{
+    width: 20%;
+    height: 570px;
+    border-right: 5px solid skyblue;
+    float: left;
+}
+
+main {
+    height: 570px;
+    width: 75%;
+    margin-left: 22%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-top: 100px;
+}
+
+footer {
+    clear: both;
+    height: 50px;
+    text-align: center;
+}
+
+/* Tablet */
+@media only screen and (max-width: 900px) {
+
+    header, nav, aside, main, footer {
+        width: 96%;
+        margin-left: 2%;
+        box-sizing: border-box;
+    }
+
+    header {
+        height: auto;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28pt;
+    }
+
+    nav {
+        height: auto;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    nav ul li {
+        flex: 1 1 0;
+        width: auto;
+        font-size: 12pt;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+    a:hover {
+        font-size: 12pt;
+    }
+
+    aside {
+        float: none;
+        width: 96%;
+        height: auto;
+        border-right: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    aside br {
+        display: none;
+    }
+
+    .pic1, .pic2 {
+        width: 200px;
+        height: 200px;
+        margin: 0;
+    }
+
+    main {
+        float: none;
+        clear: both;
+        width: 96%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        margin-top: 10px;
+    }
+
+    .pic3, .pic4, .pic5, .pic6 {
+        width: 200px;
+        height: 200px;
+        margin: 0;
+    }
+
+    footer {
+        clear: both;
+        height: auto;
+        padding: 10px;
+    }
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+
+    h1 {
+        font-size: 24pt;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        flex: none;
+        width: 100%;
+        border-left: none;
+        margin-bottom: 3px;
+    }
+
+    aside {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pic1, .pic2, .pic3, .pic4, .pic5, .pic6 {
+        width: 200px;
+        height: 200px;
+        max-width: 100%;
+    }
+}
